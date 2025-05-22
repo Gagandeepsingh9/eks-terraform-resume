@@ -9,8 +9,8 @@ metadata:
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ca-central-1:339713022110:certificate/cb3cf7ab-e6d2-4b70-9f61-128fe11b6ef0
     alb.ingress.kubernetes.io/target-type: ip  #routing traffic directly to my pods ip
     alb.ingress.kubernetes.io/backend-protocol: HTTP 
-    alb.ingress.kubernetes.io/subnets: subnet-005e8b447f30a6cc6, subnet-087345fe2ecb18814
-    alb.ingress.kubernetes.io/security-groups: sg-07e8139a47e8fac26
+    alb.ingress.kubernetes.io/subnets: subnet-005e8b447f30a6cc6, subnet-087345fe2ecb18814 #public subnet ids in my vpc, created using terraform
+    alb.ingress.kubernetes.io/security-groups: sg-07e8139a47e8fac26 #attaching alb-ingress-sg, created using terraform
 spec:
   ingressClassName: alb
   rules:
