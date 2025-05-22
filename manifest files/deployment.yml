@@ -1,0 +1,27 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: cloudresume-deployment
+  namespace: cloud
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      project: Cloud-resume
+  template:
+    metadata:
+      labels:
+        project: Cloud-resume
+    spec:
+      containers:
+      - name: resume-containers
+        image: mrsinghdocker/myresumeimage:v1
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 200m
+            memory: 256Mi

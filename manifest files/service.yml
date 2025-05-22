@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: cloudresume-service
+  namespace: cloud
+spec:
+  selector:
+    project: Cloud-resume
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+  type: ClusterIP

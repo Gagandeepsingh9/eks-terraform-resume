@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resume website of Gagandeep Singh – AWS Certified Cloud Practitioner." />
+  <title>Gagandeep Singh – Cloud Resume</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Serif:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dark-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="cv">
+    <div class="mainDetails">
+      <div id="headshot">
+        <img src="headshot.jpg" alt="Gagandeep Singh" />
+      </div>
+      <div class="nameContactWrap">
+        <div class="topText">
+          <h1>Gagandeep Singh</h1>
+          <h4>AWS Certified Cloud Practitioner</h4>
+        </div>
+        <div id="contactDetails">
+          <ul>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:gagan13.ca@gmail.com">gagan13.ca@gmail.com</a></li>
+            <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/profile-gagandeepsingh/" target="_blank">LinkedIn Profile</a></li>
+            <li><i class="fab fa-github"></i> <a href="https://github.com/Gagandeepsingh9" target="_blank">GitHub</a></li>
+            <li><strong>Views:</strong> <span class="count-number">Loading...</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="sectionTitle"><h2><i class="fas fa-user"></i> Personal Profile</h2></div>
+      <div class="sectionContent">
+        <p>Hardworking and enthusiastic IT professional with a strong passion for cloud computing. Eager to learn, adapt, and contribute to innovative solutions in cloud architecture and DevOps. This resume is fully hosted and deployed on AWS infrastructure I designed and built.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="sectionTitle"><h2><i class="fas fa-graduation-cap"></i> Education</h2></div>
+      <div class="sectionContent">
+        <h3>St. Lawrence College – Ontario, Canada</h3>
+        <p class="subDetails">January 2018 – April 2019</p>
+        <p>Computer Networking and Technical Support. Graduated with a 3.55 GPA.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="sectionTitle"><h2><i class="fas fa-certificate"></i> Certifications</h2></div>
+      <div class="sectionContent">
+        <h3>AWS Certified Cloud Practitioner</h3>
+        <p class="subDetails">Issued August 2024 – Score: 951</p>
+        <p>Upcoming: AWS Certified Solutions Architect – Expected 2025</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="sectionTitle"><h2><i class="fas fa-laptop-code"></i> Hands-on Projects</h2></div>
+      <div class="sectionContent">
+        <h3>AWS Cloud Quest – Cloud Practitioner Level</h3>
+      <ul>
+        <li>Completed 12 Practical Labs</li>
+        <li>Hands-on experience with S3, EC2, RDS, DynamoDB, IAM, EFS, VPC, Auto Scaling, Load Balancers, and AWS Pricing Calculator.</li>
+      </ul>
+        <h3>Cloud Resume Challenge – Serverless Web App</h3>
+        <ul>
+          <li>Frontend hosted on S3 and served through CloudFront with HTTPS via ACM certificates.</li>
+          <li>Custom domain configured using Route 53 and DNS settings from Namecheap.</li>
+          <li>Backend powered by Python-based AWS Lambda and DynamoDB to track live page views using Lambda Function URL.</li>
+          <li>Infrastructure managed using Terraform with remote state stored in a private S3 bucket.</li>
+          <li>CI/CD pipelines created using GitHub Actions for automated deployments.</li>
+        </ul>
+        <h3>Secure Resume Website on Amazon EKS</h3>
+          <p><strong>Tools:</strong> AWS EKS, Kubernetes, Helm, Docker, Route 53, AWS Load Balancer Controller (ALB), ACM, IAM/IRSA</p>
+          <ul>
+          <li>Containerized a personal resume website using Docker and published the image to Docker Hub.</li>
+          <li>Provisioned an EKS cluster via AWS CLI and deployed the application with Kubernetes manifests (Deployment, Service, Namespace).</li>
+          <li>Installed and configured the AWS Load Balancer Controller through Helm, leveraging IAM Roles for Service Accounts (IRSA) for least‑privilege access.</li>
+          <li> ingress traffic with TLS certificates from AWS Certificate Manager, enabling HTTPS termination at the ALB.</li>
+          <li>Mapped a custom domain in Route 53 to the ALB, ensuring reliable DNS routing and encrypted connections</li>
+        </ul>
+      </div>
+    </section>
+
+
+
+    <section>
+      <div class="sectionTitle"><h2><i class="fas fa-tools"></i> Key Skills</h2></div>
+      <div class="sectionContent">
+        <ul class="keySkills">
+          <li>AWS</li>
+          <li>Serverless Architecture</li>
+          <li>Terraform</li>
+          <li>Python</li>
+          <li>GitHub</li>
+          <li>Linux</li>
+          <li>Computer Hardware</li>
+          <li>Quick Learner</li>
+          <li>Kubernetes</li>
+          <li>Docker</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+<script src="./index.js"></script>  
+</body>
+</html>

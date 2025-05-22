@@ -1,0 +1,31 @@
+kind: Ingress
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: cloudresume-ingress
+  namespace: cloud
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80, "HTTPS": 443}]'
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ca-central-1:339713022110:certificate/cb3cf7ab-e6d2-4b70-9f61-128fe11b6ef0
+    alb.ingress.kubernetes.io/target-type: ip  #routing traffic directly to my pods ip
+    alb.ingress.kubernetes.io/backend-protocol: HTTP 
+    alb.ingress.kubernetes.io/subnets: subnet-005e8b447f30a6cc6, subnet-087345fe2ecb18814
+    alb.ingress.kubernetes.io/security-groups: sg-07e8139a47e8fac26
+spec:
+  ingressClassName: alb
+  rules:
+  - host: eks.mrsinghincloud.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: cloudresume-service 
+            port: 
+              number: 80
+  tls:
+    - hosts:
+        - eks.mrsinghincloud.com
+      secretName: just-anything-random #Because we are using the ACM for managing the certificates
+ 
