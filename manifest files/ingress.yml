@@ -11,6 +11,7 @@ metadata:
     alb.ingress.kubernetes.io/backend-protocol: HTTP 
     alb.ingress.kubernetes.io/subnets: subnet-005e8b447f30a6cc6, subnet-087345fe2ecb18814 #public subnet ids in my vpc, created using terraform
     alb.ingress.kubernetes.io/security-groups: sg-07e8139a47e8fac26 #attaching alb-ingress-sg, created using terraform
+    alb.ingress.kubernetes.io/healthcheck-path: / # for healthchecks by ALB,it will send HTTP GET requests to pods ip
 spec:
   ingressClassName: alb
   rules:
@@ -24,8 +25,3 @@ spec:
             name: cloudresume-service 
             port: 
               number: 80
-  tls:
-    - hosts:
-        - eks.mrsinghincloud.com
-      secretName: just-anything-random #Because we are using the ACM for managing the certificates
- 
