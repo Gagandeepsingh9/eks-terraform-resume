@@ -25,7 +25,7 @@ module "eks" {
   subnet_ids = module.vpc.private_subnets #subnet i want to use for EKS worker nodes
   control_plane_subnet_ids = module.vpc.intra_subnets #subnet i want to use for EKS control plane
 
-  enable_irsa = true # for IAM roles for service accounts
+  enable_irsa = true # Creates the OIDC identity provider so we can use it later for IAM Roles for Service Accounts (IRSA)
 
   eks_managed_node_group_defaults = {
     instance_types = ["t2.medium"]
