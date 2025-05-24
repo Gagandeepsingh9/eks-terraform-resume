@@ -7,7 +7,7 @@
 [![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat&logo=amazon-aws&logoColor=white)](https://aws.amazon.com)
 
 <p align="center">
-  <img src="architecture.jpeg" alt="AWS Architecture Diagram" width="600" />
+  <img src="architecture.png" alt="AWS Architecture Diagram" width="650" />
 </p>
 
 This repository shows how to deploy a static resume website on AWS using Terraform, Docker, and Amazon EKS. It follows best practices for infrastructure as code, container orchestration, and secure, scalable networking.
